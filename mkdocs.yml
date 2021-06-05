@@ -1,0 +1,42 @@
+site_name: 今日份沙雕的mkdocs博客
+theme:
+  name: material
+  language: 'zh'
+nav:
+  - 介绍: index.md
+  - APP:
+      - Linux: APP/Linux.md
+      - Windows: APP/Windows.md
+  - 网络安全:
+      - WriteUp: Security/WriteUp.md
+  - 学习笔记:
+      - C++: Learn/C++读书笔记.md
+      - 课设作业_基于socket的文件加密传输程序: Learn/Other.md
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: false
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde      
+extra:
+  search:
+    language: 'jp'
