@@ -1,129 +1,5 @@
 ## WriteUp1
 
-https://buuoj.cn/
-
-### basic 1
-
- Linux Labs 
-
-通过ssh命令登录远程Linux服务器。
-
-调用ls 命令查看当前目录文件查看是否存在提示。
-
-![image-20210508175342698](WriteUp.assets/image-20210508175342698.png)
-
-是否存在隐藏文件？使用ls -a查看
-
-![image-20210508175432285](WriteUp.assets/image-20210508175432285.png)
-
-查看根目录文件，ls -a /
-
-![image-20210508175647763](WriteUp.assets/image-20210508175647763.png)
-
-vim查看。
-
-sql盲注：
-
-and if(ascii(mid((select ),1,1))==10,sleep(5),1)
-
-### 一眼就解密
-
-![image-20210510101516073](WriteUp.assets/image-20210510101516073.png)
-
-由等于号可知，base64编码，使用hackerbar解码完成
-
-
-
-### BUU LFI COURSE 1
-
-![image-20210510103653978](WriteUp.assets/image-20210510103653978.png)
-
-![image-20210510103706640](WriteUp.assets/image-20210510103706640.png)
-
-判断是文件包含漏洞，利用御剑扫描工具扫描后发现，该地址下存在两个php地址
-
-![image-20210510104021079](WriteUp.assets/image-20210510104021079.png)
-
-不懂，等着看视频
-
-
-
-
-
-### [常见的搜集](https://book.nu1l.com/tasks/#/pages/web/1.1?id=常见的搜集)
-
-
-
-用docker-compose命令搭建环境
-
-![image-20210510104801590](WriteUp.assets/image-20210510104801590-1622875776893.png)
-
-
-
-![image-20210510104634182](WriteUp.assets/image-20210510104634182-1622875781474.png)
-
-
-
-用御剑扫描工具搜索
-
-![image-20210510105023021](WriteUp.assets/image-20210510105023021.png)
-
-打开robots.txt
-
-![image-20210510105058086](WriteUp.assets/image-20210510105058086.png)
-
-访问对应后缀
-
-![image-20210510105135763](WriteUp.assets/image-20210510105135763.png)
-
-## WriteUp2
-
-### 1.Quoted-printable
-
-![image-20210511165709902](WriteUp.assets/image-20210511165709902.png)
-
-猜测是Url编码并进行了%替换=
-
-将=替换为%并进行解码。得到
-
-![image-20210511165947937](WriteUp.assets/image-20210511165947937.png)
-
-添加flag{那你也很棒哦}
-
-提交
-
-### 2.篱笆墙的影子
-
-![image-20210511170104672](WriteUp.assets/image-20210511170104672.png)
-
-观察后发现似乎是栅栏编码，
-
-![image-20210511170250300](WriteUp.assets/image-20210511170250300.png)
-
-解码得到flag
-
-### 3.Alice与Bob
-
-![image-20210511170457259](WriteUp.assets/image-20210511170457259.png)
-
-寻找在线分解大素数网站
-
-![image-20210511170528985](WriteUp.assets/image-20210511170528985.png)
-
-
-
-分解后进行md5哈希
-
-![image-20210511170807877](WriteUp.assets/image-20210511170807877.png)
-
-添加flag前缀提交
-
-
-
-![image-20210511170742851](WriteUp.assets/image-20210511170742851.png)
-
-## WriteUp3
-
 ### BUU BRUTE 1
 
 由题目猜测可能是暴力破解
@@ -218,7 +94,7 @@ file=index.php
 
 ![image-20210512212333883](WriteUp.assets/image-20210512212333883.png)
 
-##  writeup4
+##  writeup2
 
 ### BUU CODE REVIEW 1
 
@@ -338,7 +214,7 @@ or
 
 ../表示访问上一层目录，四层../代表访问 /var/www/html/hint.php
 
-## WriteUp5
+## WriteUp3
 
 ### [极客大挑战 2019]Secret File
 
@@ -525,7 +401,7 @@ python环境配置一直出错，这个GitHub项目太老了
 
 ![image-20210521220737693](WriteUp.assets/image-20210521220737693.png)
 
-## WriteUp6
+## WriteUp4
 
 ### RSA1
 
@@ -887,7 +763,7 @@ post %00 截断
 
 利用apache解析漏洞解析
 
-## WriteUp7
+## WriteUp5
 
 ### [强网杯 2019]随便注
 
@@ -989,7 +865,7 @@ uniunionon selselectect 1,2,group_concat(passwoorrd) frfromom b4bsql -- +
 
 ![image-20210601233406244](WriteUp.assets/image-20210601233406244.png)
 
-## Writeup8
+## Writeup6
 
 ### 变异凯撒
 
