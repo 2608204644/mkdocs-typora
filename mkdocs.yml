@@ -11,7 +11,6 @@ nav:
       - WriteUp: Security/WriteUp.md
   - 学习笔记:
       - C++: Learn/C++读书笔记.md
-      - 课设作业_基于socket的文件加密传输程序: Learn/Other.md
 markdown_extensions:
   - admonition
   - codehilite:
